@@ -116,8 +116,9 @@ a {
 
 .advantage {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
-    width: 1010px;
+    max-width: 1010px;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 64px;
@@ -144,8 +145,9 @@ a {
     max-width:  1300px;
     height: 330px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 30px;
+    margin: 0 auto;
 }
 .change-background {
     background-color:var(--background-white);
@@ -179,7 +181,10 @@ a {
 
 .flex-grow {
     flex: 2 0 500px;
-    margin-right: 102px;
+}
+
+.article-paragraph {
+    margin-right: 90px;
 }
 
 .booking-section {
