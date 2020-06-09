@@ -118,16 +118,23 @@ a {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 1010px;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 64px;
+    padding: 0 140px;
+}
+
+@media (max-width: 700px){
+   .advantage {
+       padding: 0;
+   }
 }
 
 .advantage-item {
     padding: 5px;
-    width: 300px;
+    flex: 1 1 300px;
 }
+
 .advantage-item h3{
     font-size: 30px;
     margin: 0;
@@ -139,7 +146,6 @@ a {
     line-height: 23px;
     padding: 1px  15px 0 0;
 }
-
 
 .article-section {
     max-width:  1300px;
@@ -179,14 +185,27 @@ a {
     height: 200px;
 }
 
-.flex-grow {
-    flex: 2 0 500px;
-}
-
-.article-paragraph {
+.article-paragraph:first-child {
     margin-right: 90px;
 }
-
+@media (max-width: 700px){
+    .article-section{
+        max-width: 700px;
+        height: auto;
+    }
+    .article {
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+    }
+    .article-paragraph {
+        text-align: justify;
+        margin: 5px;
+    }
+    .reverce >img{
+        margin: 0;
+    }
+}
 .booking-section {
     background-color: var(--background-white);
     padding: 30px 30px 80px 30px;
@@ -202,7 +221,6 @@ a {
 }
 
 .form-style {
-    width: 460px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -274,6 +292,44 @@ a {
     cursor: pointer;
     outline: none;
 }
+
+@media (max-width: 700px){
+    .input-style {
+        max-width: 350px;
+        padding: 15px 0;
+        height: auto;
+    }
+    .position-1 {
+        bottom: 150px;
+    }
+    .position-2 {
+        bottom: 182px;
+    }
+    .input-style > label {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+    .booking-select {
+        margin: 5px 0;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .input-style {
+        max-width: 300px;
+    }
+    .input-heading {
+        font-size: 20px;
+    }
+    .position-1 {
+        bottom: 150px;
+    }
+    .position-2 {
+        bottom: 186px;
+    }
+}
 .main-footer {
     background-color: var(--footer-color);
     color: var(--main-white);
@@ -295,4 +351,11 @@ a {
     font-weight: normal;
     font-size: 14px;
     color: #a6aab0;
+}
+
+@media (max-width: 700px) {
+    .main-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
