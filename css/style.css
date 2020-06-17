@@ -63,7 +63,7 @@ a {
 }
 
 .main-banner {
-	background: url(/img/banner.png) 0.5% 70.2% no-repeat;
+	background: url("../img/banner.png") 0.5% 70.2% no-repeat;
 	height: 402px;
 	color: var(--main-white);
 	font-weight: bold;
